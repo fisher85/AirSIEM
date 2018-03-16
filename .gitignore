@@ -319,3 +319,6 @@ ASALocalRun/
 # MSBuild Binary and Structured Log
 *.binlog
 
+## Composer.gitignore
+composer.phar
+console/vendor/

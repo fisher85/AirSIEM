@@ -1,0 +1,20 @@
+﻿<group name="web-app">
+
+  <rule id="100000" level="0">
+    <match>/buggy/</match>
+    <description>Access to BUGGY webapp</description>
+  </rule>
+
+  <rule id="100001" level="0">
+    <if_sid>100000</if_sid>
+    <match>password</match>
+    <description>Attempt to login to BUGGY webapp</description>
+  </rule>
+  
+  <rule id="100002" level="1" frequency="3" timeframe="5">
+    <if_matched_sid>100001</if_matched_sid>
+    <same_source_ip/>
+    <description>Brute force trying to login to BUGGY webapp</description>
+  </rule>
+
+</group>
