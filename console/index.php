@@ -3,7 +3,7 @@
   require __DIR__ . '/vendor/autoload.php';
   
   // Connect to MongoDB
-  $database = (new MongoDB\Client("mongodb://192.168.137.1:27017"))->test;
+  $database = (new MongoDB\Client("mongodb://192.168.137.1:27017"))->AirSIEM;
   $collection = $database->alerts;
   $cursor = $collection->find([]);
 ?>
